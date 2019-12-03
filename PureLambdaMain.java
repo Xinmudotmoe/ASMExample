@@ -35,7 +35,7 @@ public interface PureLambdaMain {
     }
     class LClassLoader extends ClassLoader implements LambdaClassLoader {
         LClassLoader(){
-            super(Main.class.getClassLoader());
+            super(PureLambdaMain.class.getClassLoader());
         }
         @Override
         public Class<?> l_defineClass(String name, byte[] b, int off, int len) {
